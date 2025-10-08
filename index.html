@@ -11,6 +11,23 @@
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
+    /* ✨ Fade + Slide Animations */
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+section, .project-card, .skill-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+section:nth-of-type(1) { animation-delay: 0.2s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+section:nth-of-type(4) { animation-delay: 0.8s; }
+
 
     body {
       background-color: #0a0a0a;
@@ -119,6 +136,8 @@
     .socials a:hover {
       color: #fff;
     }
+
+
 
     /* ABOUT */
     #about {
@@ -285,14 +304,16 @@
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I’m a fresh <strong>Computer Engineering graduate</strong> passionate about creating technology that blends intelligence and functionality.
-    My focus areas include <strong>AI, Web Systems, and Drone Technology</strong> — with hands-on experience in building
-    neural network models, web automation, and Flutter-based drone control apps.
+    I’m <strong>Joren Varquez</strong>, a passionate <strong>Computer Engineering graduate</strong> dedicated to creating intelligent systems that connect technology with real-world applications.
     <br><br>
-    🎓 <strong>Education:</strong> Bachelor of Science in Computer Engineering<br>
-    🌎 <strong>Open for Remote Roles:</strong> Korea, USA, Australia
+    My expertise lies in <strong>Artificial Intelligence, Web Systems, and Drone Technology</strong>. I’ve worked on projects integrating machine learning, WebRTC, and DJI SDK for real-time aerial data analysis and automation.
+    <br><br>
+    I believe in building technology that serves people — whether through innovative drone-based detection systems or efficient web solutions for communities.
+    <br><br>
+    🌎 <strong>Open for Remote Roles:</strong> Philippines, Korea, UK, USA, and Australia
   </p>
 </section>
+
 
 <section id="projects" style="padding: 60px; text-align: center; background: #f9f9f9;">
   <h2 style="font-size: 2em; margin-bottom: 30px;">My Projects</h2>
@@ -341,13 +362,19 @@
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>📧 <a href="mailto:jorenvarquez@gmail.com">jorenvarquez@gmail.com</a></p>
-  <p>
-    🔗 <a href="https://linkedin.com/in/jorenvarquez" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/jetjet711" target="_blank">GitHub</a> |
-    <a href="#" target="_blank">Resume</a>
+  <p>📬 Let’s connect and collaborate!</p>
+
+  <div class="socials">
+    <a href="mailto:jorenvarquez11@gmail.com" target="_blank">📧 Email</a> |
+    <a href="https://github.com/jetjet711" target="_blank">🐙 GitHub</a> |
+    <a href="https://linkedin.com/in/jorenvarquez" target="_blank">💼 LinkedIn</a>
+  </div>
+
+  <p style="margin-top:15px; color:#aaa;">
+    I’m always open to discuss ideas, research, or development projects related to AI, web systems, and drones.
   </p>
 </section>
+
 
 <footer>
   <p>© 2025 Joren Varquez. All Rights Reserved.</p>
