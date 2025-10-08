@@ -305,82 +305,7 @@
   </div>
 </section>
 
-<!-- Project Modals -->
-<div id="fawModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img src="faw.png" alt="FAW Project" />
-    <h2>Aerial Detection of Fall Armyworm (FAW) Infestation in Corn Field</h2>
-    <p>
-      Drone + AI system detecting FAW infestation using TensorFlow, OpenCV, and DJI SDK.  
-      Integrated with real-time WebRTC streaming for live monitoring.
-    </p>
-    <p><strong>Tech Stack:</strong> Python, TensorFlow, OpenCV, WebRTC, DJI SDK</p>
-  </div>
-</div>
-
-<div id="baptismModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img src="cert.png" alt="Baptism Scheduling System" />
-    <h2>Baptism Scheduling System</h2>
-    <p>
-      Web system to manage baptism schedules, automate record storage, and generate digital certificates.
-    </p>
-    <p><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
-  </div>
-</div>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-item">Python</div>
-    <div class="skill-item">TensorFlow</div>
-    <div class="skill-item">PHP</div>
-    <div class="skill-item">React</div>
-    <div class="skill-item">Flutter</div>
-    <div class="skill-item">MySQL</div>
-    <div class="skill-item">WebRTC</div>
-    <div class="skill-item">OpenCV</div>
-    <div class="skill-item">DJI SDK</div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>📬 Let’s connect and collaborate!</p>
-  <div class="socials">
-    <a href="mailto:jorenvarquez11@gmail.com">📧 Email</a> |
-    <a href="https://github.com/jetjet711" target="_blank">🐙 GitHub</a> |
-    <a href="https://linkedin.com/in/jorenvarquez" target="_blank">💼 LinkedIn</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Joren Varquez. All Rights Reserved.</p>
-</footer>
-
-<script>
-  // 🟦 MODAL JS FIX
-  const fawModal = document.getElementById("fawModal");
-  const baptismModal = document.getElementById("baptismModal");
-  const openFawModal = document.getElementById("openFawModal");
-  const openBaptismModal = document.getElementById("openBaptismModal");
-  const closeButtons = document.querySelectorAll(".close");
-
-  openFawModal.onclick = () => fawModal.style.display = "block";
-  openBaptismModal.onclick = () => baptismModal.style.display = "block";
-
-  closeButtons.forEach(btn => {
-    btn.onclick = () => btn.closest(".modal").style.display = "none";
-  });
-
-  window.onclick = (event) => {
-    if (event.target === fawModal) fawModal.style.display = "none";
-    if (event.target === baptismModal) baptismModal.style.display = "none";
-  };
-</script>
-  <!-- ==========================
+<!-- ==========================
      PROJECT MODALS
 =========================== -->
 
@@ -414,6 +339,40 @@
     <p><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
   </div>
 </div>
+
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-item">Python</div>
+    <div class="skill-item">TensorFlow</div>
+    <div class="skill-item">PHP</div>
+    <div class="skill-item">React</div>
+    <div class="skill-item">Flutter</div>
+    <div class="skill-item">MySQL</div>
+    <div class="skill-item">WebRTC</div>
+    <div class="skill-item">OpenCV</div>
+    <div class="skill-item">DJI SDK</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📬 Let’s connect and collaborate!</p>
+  <div class="socials">
+    <a href="mailto:jorenvarquez11@gmail.com">📧 Email</a> |
+    <a href="https://github.com/jetjet711" target="_blank">🐙 GitHub</a> |
+    <a href="https://linkedin.com/in/jorenvarquez" target="_blank">💼 LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Joren Varquez. All Rights Reserved.</p>
+</footer>
+
+<!-- ==========================
+     MODAL SCRIPT
+=========================== -->
 <script>
 function openModal(id) {
   document.getElementById(id).style.display = "block";
@@ -426,12 +385,9 @@ function closeModal(id) {
 window.onclick = function(event) {
   const modals = document.querySelectorAll('.modal');
   modals.forEach(m => {
-    if (event.target == m) {
-      m.style.display = "none";
-    }
+    if (event.target === m) m.style.display = "none";
   });
 };
 </script>
-
 </body>
 </html>
