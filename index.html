@@ -277,6 +277,27 @@
       color: #0a0a0a;
       transform: scale(1.05);
     }
+.skill-key {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 0 #222;
+}
+
+.skill-key:hover {
+  background: #4da6ff;
+  transform: translateY(-2px);
+}
+
+.skill-key:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #222;
+}
 
     /* === CONTACT === */
     #contact { text-align: center; }
@@ -399,20 +420,35 @@
 </div>
 
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-item">Python</div>
-    <div class="skill-item">TensorFlow</div>
-    <div class="skill-item">PHP</div>
-    <div class="skill-item">React</div>
-    <div class="skill-item">Flutter</div>
-    <div class="skill-item">MySQL</div>
-    <div class="skill-item">WebRTC</div>
-    <div class="skill-item">OpenCV</div>
-    <div class="skill-item">DJI SDK</div>
+<section id="skills" style="text-align: center; padding: 60px 20px;">
+  <h2 style="color: #fff; font-size: 2rem; margin-bottom: 20px;">💻 My Skills</h2>
+
+  <div id="skills-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <button class="skill-key" data-skill="html">HTML</button>
+    <button class="skill-key" data-skill="css">CSS</button>
+    <button class="skill-key" data-skill="js">JavaScript</button>
+    <button class="skill-key" data-skill="react">React</button>
+    <button class="skill-key" data-skill="python">Python</button>
+    <button class="skill-key" data-skill="php">PHP</button>
+    <button class="skill-key" data-skill="mysql">MySQL</button>
+  </div>
+
+  <div id="skill-popup" style="
+    display: none;
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: left;
+    border: 1px solid #555;
+  ">
+    <h3 id="skill-title" style="color: #4da6ff;"></h3>
+    <p id="skill-description"></p>
   </div>
 </section>
+
 
 <section id="contact">
   <h2>Contact</h2>
@@ -458,6 +494,53 @@ window.onclick = function(event) {
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
+    });
+  });
+</script>
+<script>
+  const skills = {
+    html: {
+      title: "HTML (HyperText Markup Language)",
+      desc: "The structure of web pages — defines elements like headings, paragraphs, images, and links."
+    },
+    css: {
+      title: "CSS (Cascading Style Sheets)",
+      desc: "Used for styling and layout — controls colors, fonts, spacing, and responsiveness."
+    },
+    js: {
+      title: "JavaScript",
+      desc: "Adds interactivity — creates animations, dynamic content, and handles user actions."
+    },
+    react: {
+      title: "React",
+      desc: "A JavaScript library for building fast and modern user interfaces using reusable components."
+    },
+    python: {
+      title: "Python",
+      desc: "A general-purpose programming language great for AI, automation, and backend development."
+    },
+    php: {
+      title: "PHP",
+      desc: "A server-side scripting language used for building dynamic websites and connecting to databases."
+    },
+    mysql: {
+      title: "MySQL",
+      desc: "A powerful open-source database system for storing and managing structured data."
+    }
+  };
+
+  const buttons = document.querySelectorAll('.skill-key');
+  const popup = document.getElementById('skill-popup');
+  const title = document.getElementById('skill-title');
+  const desc = document.getElementById('skill-description');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const skill = skills[btn.dataset.skill];
+      title.textContent = skill.title;
+      desc.textContent = skill.desc;
+      popup.style.display = 'block';
+      popup.scrollIntoView({ behavior: 'smooth' });
     });
   });
 </script>
