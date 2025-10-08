@@ -469,3 +469,30 @@ section:nth-of-type(4) { animation-delay: 0.8s; }
 
 </body>
 </html>
+<script>
+  // Get modal elements
+  const fawModal = document.getElementById("fawModal");
+  const baptismModal = document.getElementById("baptismModal");
+
+  // Get buttons (links)
+  const fawBtn = document.querySelector('.project-card:nth-child(1) a');
+  const baptismBtn = document.querySelector('.project-card:nth-child(2) a');
+
+  // Get close buttons
+  const closeBtns = document.querySelectorAll(".close");
+
+  // Open modals
+  fawBtn.onclick = () => fawModal.style.display = "block";
+  baptismBtn.onclick = () => baptismModal.style.display = "block";
+
+  // Close modals
+  closeBtns.forEach(btn => {
+    btn.onclick = () => btn.parentElement.parentElement.style.display = "none";
+  });
+
+  // Close modal when clicking outside
+  window.onclick = function(e) {
+    if (e.target === fawModal) fawModal.style.display = "none";
+    if (e.target === baptismModal) baptismModal.style.display = "none";
+  }
+</script>
