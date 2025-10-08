@@ -380,5 +380,58 @@
     if (event.target === baptismModal) baptismModal.style.display = "none";
   };
 </script>
+  <!-- ==========================
+     PROJECT MODALS
+=========================== -->
+
+<!-- Modal: FAW Detection -->
+<div id="fawModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('fawModal')">&times;</span>
+    <img src="faw.png" alt="FAW Detection" class="modal-img">
+    <h2>Aerial Detection of Fall Armyworm (FAW) Infestation in Corn Field</h2>
+    <p>
+      This project uses drone-captured aerial imagery combined with deep learning
+      to automatically detect and analyze Fall Armyworm infestations in corn fields.
+      It integrates object detection models with real-time data visualization to
+      assist farmers in identifying and responding to crop threats faster.
+    </p>
+    <p><strong>Tech Stack:</strong> Python, YOLOv8, OpenCV, TensorFlow, Flask</p>
+  </div>
+</div>
+
+<!-- Modal: Baptism Scheduling System -->
+<div id="baptismModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('baptismModal')">&times;</span>
+    <img src="cert.png" alt="Baptism Scheduling System" class="modal-img">
+    <h2>Baptism Scheduling System</h2>
+    <p>
+      A web-based system that streamlines the scheduling, management, and certificate
+      requests for baptisms. It provides parish staff with efficient tools to
+      record, organize, and generate official baptism certificates seamlessly.
+    </p>
+    <p><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
+  </div>
+</div>
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(m => {
+    if (event.target == m) {
+      m.style.display = "none";
+    }
+  });
+};
+</script>
+
 </body>
 </html>
