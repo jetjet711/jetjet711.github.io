@@ -137,6 +137,64 @@ section:nth-of-type(4) { animation-delay: 0.8s; }
       color: #fff;
     }
 
+/* MODAL STYLES */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #00bfff;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00bfff;
+  color: #ccc;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  color: #00bfff;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
 
 
     /* ABOUT */
@@ -343,6 +401,35 @@ section:nth-of-type(4) { animation-delay: 0.8s; }
   </div>
 </section>
 
+<!-- Project Modals -->
+<div id="fawModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="faw.png" alt="FAW Project" />
+    <h2>Aerial Detection of Fall Armyworm (FAW) Infestation in Corn Field</h2>
+    <p>
+      A drone-based AI system designed to detect and monitor Fall Armyworm
+      (FAW) infestations in cornfields. This project integrates <strong>computer vision</strong>, 
+      <strong>DJI SDK</strong>, and <strong>WebRTC streaming</strong> to perform 
+      real-time detection of infested corn plants using an onboard camera feed.
+    </p>
+    <p><strong>Tech Stack:</strong> Python, TensorFlow, OpenCV, WebRTC, DJI SDK</p>
+  </div>
+</div>
+
+<div id="baptismModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="cert.png" alt="Baptism Scheduling System" />
+    <h2>Baptism Scheduling System</h2>
+    <p>
+      A web-based application built with <strong>PHP</strong> and <strong>MySQL</strong>
+      that allows church staff and parishioners to schedule baptism ceremonies,
+      manage records, and generate digital certificates with ease.
+    </p>
+    <p><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
+  </div>
+</div>
 
 
 <section id="skills">
