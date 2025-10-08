@@ -255,48 +255,60 @@
 
     .project-card-content button:hover { background: #0088cc; }
 
-    /* === SKILLS === */
-    #skills { text-align: center; }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      text-align: center;
-      margin-top: 30px;
-    }
+    #skills {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0e0e0e;
+}
 
-    .skill-item {
-      background-color: #1a1a1a;
-      padding: 15px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
 
-    .skill-item:hover {
-      background-color: #00bfff;
-      color: #0a0a0a;
-      transform: scale(1.05);
-    }
 .skill-key {
-  background: #333;
-  color: #fff;
-  border: 1px solid #555;
-  border-radius: 6px;
-  padding: 12px 20px;
-  font-size: 16px;
+  background: #1a1a1a;
+  border: 2px solid #00bfff;
+  color: #00bfff;
+  padding: 18px 32px;
+  border-radius: 8px;
+  font-size: 1em;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 3px 0 #222;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,191,255,0.2);
 }
 
 .skill-key:hover {
-  background: #4da6ff;
-  transform: translateY(-2px);
+  background: #00bfff;
+  color: #0a0a0a;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #00bfff;
 }
 
-.skill-key:active {
-  transform: translateY(2px);
-  box-shadow: 0 1px 0 #222;
+/* Skill popup box */
+#skill-popup {
+  margin-top: 40px;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #00bfff;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  color: #ccc;
+  box-shadow: 0 0 20px rgba(0,191,255,0.3);
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
     /* === CONTACT === */
@@ -420,10 +432,9 @@
 </div>
 
 
-<section id="skills" style="text-align: center; padding: 60px 20px;">
-  <h2 style="color: #fff; font-size: 2rem; margin-bottom: 20px;">💻 My Skills</h2>
-
-  <div id="skills-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
     <button class="skill-key" data-skill="html">HTML</button>
     <button class="skill-key" data-skill="css">CSS</button>
     <button class="skill-key" data-skill="js">JavaScript</button>
@@ -433,21 +444,12 @@
     <button class="skill-key" data-skill="mysql">MySQL</button>
   </div>
 
-  <div id="skill-popup" style="
-    display: none;
-    background: #222;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    margin: 30px auto;
-    text-align: left;
-    border: 1px solid #555;
-  ">
-    <h3 id="skill-title" style="color: #4da6ff;"></h3>
+  <div id="skill-popup">
+    <h3 id="skill-title"></h3>
     <p id="skill-description"></p>
   </div>
 </section>
+
 
 
 <section id="contact">
