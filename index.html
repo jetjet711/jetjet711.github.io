@@ -396,40 +396,62 @@
   </div>
 </section>
 
-<!-- ==========================
-     PROJECT MODALS
-=========================== -->
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-container">
 
-<!-- Modal: FAW Detection -->
-<div id="fawModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('fawModal')">&times;</span>
-    <img src="faw.png" alt="FAW Detection" class="modal-img">
-    <h2>Aerial Detection of Fall Armyworm (FAW) Infestation in Corn Field</h2>
-    <p>
-      This project uses drone-captured aerial imagery combined with deep learning
-      to automatically detect and analyze Fall Armyworm infestations in corn fields.
-      It integrates object detection models with real-time data visualization to
-      assist farmers in identifying and responding to crop threats faster.
-    </p>
-    <p><strong>Tech Stack:</strong> Python, YOLOv8, OpenCV, TensorFlow, Flask</p>
-  </div>
-</div>
+    <!-- Project 1: FAW Detection -->
+    <div class="project-card">
+      <img src="faw.png" alt="FAW Detection Project">
+      <div class="project-card-content">
+        <h3>Aerial Detection of Fall Armyworm (FAW) Infestation in Corn Field</h3>
+        <p>A drone-based AI system to detect FAW infestations using aerial imagery and real-time vision analysis.</p>
+        <button onclick="openModal('fawModal')">View Details</button>
+      </div>
+    </div>
 
-<!-- Modal: Baptism Scheduling System -->
-<div id="baptismModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('baptismModal')">&times;</span>
-    <img src="cert.png" alt="Baptism Scheduling System" class="modal-img">
-    <h2>Baptism Scheduling System</h2>
-    <p>
-      A web-based system that streamlines the scheduling, management, and certificate
-      requests for baptisms. It provides parish staff with efficient tools to
-      record, organize, and generate official baptism certificates seamlessly.
-    </p>
-    <p><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
+    <!-- Project 2: Baptism Scheduling System -->
+    <div class="project-card">
+      <img src="cert.png" alt="Baptism Scheduling System">
+      <div class="project-card-content">
+        <h3>Baptism Scheduling System</h3>
+        <p>A PHP-MySQL system for managing baptism schedules, records, and digital certificates for parish offices.</p>
+        <button onclick="openModal('baptismModal')">View Details</button>
+      </div>
+    </div>
+
+    <!-- Project 3: Line-Follower Robot -->
+    <div class="project-card">
+      <img src="robot.jpg" alt="Line Follower Robot">
+      <div class="project-card-content">
+        <h3>Line-Follower Robot</h3>
+        <p>A microprocessor-based autonomous robot that follows a defined path using infrared sensors and motor control.</p>
+        <button onclick="openModal('robotModal')">View Details</button>
+      </div>
+    </div>
+
+    <!-- Project 4: 4-Bit Subtractor -->
+    <div class="project-card">
+      <img src="subtractor.jpg" alt="4-Bit Subtractor">
+      <div class="project-card-content">
+        <h3>4-Bit Subtractor</h3>
+        <p>A digital electronics project designed using logic gates to perform binary subtraction operations accurately.</p>
+        <button onclick="openModal('subtractorModal')">View Details</button>
+      </div>
+    </div>
+
+    <!-- Project 5: RFID-Based Door Lock System -->
+    <div class="project-card">
+      <img src="rfid.jpg" alt="RFID Door Lock System">
+      <div class="project-card-content">
+        <h3>RFID-Based Door Lock System</h3>
+        <p>An embedded door access control system using RFID authentication, LCD feedback, and microcontroller logic.</p>
+        <button onclick="openModal('rfidModal')">View Details</button>
+      </div>
+    </div>
+
   </div>
-</div>
+</section>
 
 
 <section id="skills">
