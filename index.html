@@ -593,6 +593,41 @@ window.onclick = function(event) {
     });
   });
 </script>
+<script>
 
+/* ==========================
+   SCROLL REVEAL ANIMATION
+========================== */
+
+const observer = new IntersectionObserver((entries)=>{
+
+  entries.forEach((entry)=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
+
+    }
+
+  });
+
+},{
+  threshold:0.15
+});
+
+/* Animate Sections */
+const hiddenElements = document.querySelectorAll(
+  "section, .project-card, .feature-box, .tech, .card"
+);
+
+hiddenElements.forEach((el)=>{
+
+  el.classList.add("hidden");
+
+  observer.observe(el);
+
+});
+
+</script>
 </body>
 </html>
