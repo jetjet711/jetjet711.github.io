@@ -152,4 +152,19 @@
 #about .btn:hover {
   background: #0088cc;
 }
+.project-btn{
+  display:inline-block;
+  margin-top:15px;
+  background:#00bfff;
+  color:#0a0a0a;
+  padding:10px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
 
+.project-btn:hover{
+  background:#0088cc;
+  transform:translateY(-2px);
+}
