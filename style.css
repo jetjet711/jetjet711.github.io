@@ -168,3 +168,39 @@
   background:#0088cc;
   transform:translateY(-2px);
 }
+/* ==========================
+   SCROLL ANIMATIONS
+========================== */
+
+.hidden{
+  opacity:0;
+  transform:translateY(50px);
+  transition:all 1s ease;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Project card stagger effect */
+.project-card{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.project-card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Hover glow animation */
+.project-card:hover{
+  transform:translateY(-10px) scale(1.02);
+}
+
+/* Smooth fade for sections */
+section{
+  transition:1s ease;
+}
