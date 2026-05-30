@@ -204,3 +204,24 @@
 section{
   transition:1s ease;
 }
+/* ==========================
+   VIDEO SECTION
+========================== */
+
+.video-container{
+  position:relative;
+  width:100%;
+  padding-bottom:56.25%;
+  margin-top:30px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 0 25px rgba(0,191,255,0.2);
+}
+
+.video-container iframe{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+}
